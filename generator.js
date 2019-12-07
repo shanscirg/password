@@ -5,11 +5,15 @@ function generate(passLength, userChoices) {
 
     for (let index = 0; index < passLength; index++) {
         let userChoiceIndex = Math.floor(Math.random() * userChoices.length);
+        console.log('userChoiceIndex', userChoiceIndex);
         let userChoice = userChoices[userChoiceIndex]
+        console.log('userChoice', userChoice);
         let characters = userChoice.split('') // turns a string into an array; 'foo' -> ['f', 'o', 'o']
+        console.log('characters', characters);
         let characterIndex = Math.floor(Math.random() * characters.length)
-
+        console.log('characterIndex', characterIndex)
         password += characters[characterIndex]
+        console.log('password', password);
     }
     return password;
 }
